@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 
 export default function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <View style={styles.container}>
-      <Text>0</Text>
-      <Button title="click me"></Button>
+      <Text style={styles.counter}>{count}</Text>
+      <Button
+        title="click me"
+        onPress={() => {
+          setCount(count + 1);
+        }}
+      ></Button>
     </View>
   );
 }
@@ -13,9 +20,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "azure",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
+  },
+  counter: {
+    fontSize: 180,
+    color: "orange",
   },
 });
