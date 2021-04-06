@@ -17,7 +17,7 @@ export default function App() {
       <Button
         style={styles.button}
         onPress={() => {
-          setCount(count - 1);
+          if (count > 0) setCount(count - 1);
         }}
         title="-"
       ></Button>
