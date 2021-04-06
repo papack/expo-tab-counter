@@ -6,13 +6,15 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.counter}>{count}</Text>
       <Button
-        title="click me"
+        style={styles.button}
+        title="+"
         onPress={() => {
           setCount(count + 1);
         }}
       ></Button>
+      <Text style={styles.counter}>{count}</Text>
+      <Button style={styles.button} title="-"></Button>
     </View>
   );
 }
