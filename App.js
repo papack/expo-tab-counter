@@ -14,7 +14,13 @@ export default function App() {
         }}
       ></Button>
       <Text style={styles.counter}>{count}</Text>
-      <Button style={styles.button} title="-"></Button>
+      <Button
+        style={styles.button}
+        onPress={() => {
+          setCount(count - 1);
+        }}
+        title="-"
+      ></Button>
     </View>
   );
 }
